@@ -50,5 +50,14 @@ class SignatureController extends Controller
         $signature = Signature::create($signature);
 
         return new SignatureResource($signature);
-    }      
+    }  
+    /*
+    _ Display the Guestbook form page.
+    _
+    _ @return \Illuminate\Contract\View\Factory|\Illuminate\View\View
+    */
+    public function create()
+    {
+        return view('signatures.sign');
+    }    
 }
