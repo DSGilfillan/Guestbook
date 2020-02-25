@@ -20,3 +20,5 @@ Vue.component('signature-form', require('.components/SignatureForm.vue'));
 const app = new Vue({
     el: '#app'
 });
+
+Vue.component('paginate', require('vuejs-paginate'));
