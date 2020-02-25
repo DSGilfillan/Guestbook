@@ -16,4 +16,14 @@ class Signature extends Model
     {
         return $query->where('flagged_at', null);
     }
+
+    /*
+    _ Get the user Gravatar by their email address.
+    _ 
+    _ @return string */
+    public function getAvatarAttribute()
+    {
+        return sprintf('https://www.gravatar.com/avatar/%s?s=100', md5($this->email));
+
+    }
 }
